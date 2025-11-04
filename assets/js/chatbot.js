@@ -1,4 +1,9 @@
-document.getElementById("send-button").addEventListener("click", sendmessage);
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("send-button").addEventListener("click", sendmessage);
+    document.getElementById("user-input").addEventListener("keypress", function(event){
+        if(event.key === "Enter") sendmessage();
+    });
+});
 document.getElementById("user-input").addEventListener("keypress", function(event){
     if(event.key === "Enter") {
         sendmessage();
